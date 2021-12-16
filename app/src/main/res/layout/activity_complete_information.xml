@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity4">
+
+    <TextView
+        android:id="@+id/complete_info_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="complete your \n information"
+        android:textColor="@color/blue"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gender_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="72dp"
+        android:text="Gender"
+        android:textColor="@color/blue"
+        android:textSize="22dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/complete_info_tv" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/gender_tv"
+        app:layout_constraintEnd_toStartOf="@+id/decrease_lenght"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/gender_tv">
+
+        <RadioButton
+            android:id="@+id/male_radio_btn"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textColor="@color/blue"
+            android:textSize="16dp" />
+
+        <RadioButton
+            android:id="@+id/female_radio_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textColor="@color/blue"
+            android:textSize="16dp" />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/weight_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Weight"
+        android:textColor="@color/blue"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/gender_tv"
+        app:layout_constraintTop_toBottomOf="@+id/gender_tv" />
+
+    <EditText
+        android:id="@+id/weigth_"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/blue"
+        app:layout_constraintBaseline_toBaselineOf="@+id/weight_tv"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/length_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Length"
+        android:textColor="@color/blue"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/weight_tv"
+        app:layout_constraintTop_toBottomOf="@+id/weight_tv" />
+
+    <EditText
+        android:id="@+id/leng_et"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/length_tv"
+        app:layout_constraintEnd_toEndOf="@+id/weigth_"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/increase_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/leng_et"
+        app:layout_constraintStart_toEndOf="@+id/leng_et"
+        app:layout_constraintTop_toTopOf="@+id/leng_et"
+        app:srcCompat="@drawable/plus_icon" />
+
+    <ImageView
+        android:id="@+id/decrease_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/leng_et"
+        app:layout_constraintEnd_toStartOf="@+id/leng_et"
+        app:layout_constraintTop_toTopOf="@+id/leng_et"
+        app:srcCompat="@drawable/minus_icon" />
+
+    <ImageView
+        android:id="@+id/decrease_lenght"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/weigth_"
+        app:layout_constraintStart_toEndOf="@+id/weigth_"
+        app:layout_constraintTop_toTopOf="@+id/weigth_"
+        app:srcCompat="@drawable/plus_icon" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/weigth_"
+        app:layout_constraintEnd_toStartOf="@+id/weigth_"
+        app:layout_constraintTop_toTopOf="@+id/weigth_"
+        app:srcCompat="@drawable/minus_icon" />
+
+
+    <TextView
+        android:id="@+id/dob_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Date Of Birth"
+        android:textColor="@color/blue"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/length_tv"
+        app:layout_constraintTop_toBottomOf="@+id/length_tv" />
+
+    <EditText
+        android:id="@+id/date_of_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBaseline_toBaselineOf="@+id/dob_tv"
+        app:layout_constraintEnd_toEndOf="@+id/increase_weight"
+        app:layout_constraintStart_toStartOf="@+id/decrease_weight" />
+
+    <Button
+        android:id="@+id/save_date_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/blue"
+        android:text="Save Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dob_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
